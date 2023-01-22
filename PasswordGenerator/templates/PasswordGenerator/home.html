@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 0px 132px;
+        }
+
+        input {
+            display: block;
+
+            margin: auto;
+            width: 106px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container {
+            margin: 6px 6px;
+        }
+
+        .ram {
+            margin: 0px 184px;
+        }
+
+        #shyam {
+            
+        
+            cursor: pointer;
+            padding: 0px 28px;
+        }
+        #lat{
+            
+            margin: 2px 206px;
+        }
+        a{
+            text-decoration: none;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        
+    </style>
+</head>
+
+<body  style="background-image: url('{% static 'img/5.jpg' %}');">
+    <div class="box">
+
+    <h1>Password Generator</h1>
+    <form class="container" action="{% url 'Password'  %}">
+        <select class="ram" id="lat" name="length" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" >4</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select><b> length</b>
+        <br>
+        <input class="ram" type="checkbox" name="Uppercase"> <b>Uppercase</b>
+        <br>
+        <input class="ram" type="checkbox" name="Specialcase"> <b>Specialcase</b>
+        <br>
+        <input class="ram" type="checkbox" name="number"> <b>number</b>
+        <br>
+        <input class="ram " class id="shyam btn-link"  type="submit" value="Submit">
+    </form>
+    <a href="{% url 'about' %}">About</a>
+    
+
+</div>
+
+
+</body>
+
+</html>
