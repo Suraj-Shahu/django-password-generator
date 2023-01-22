@@ -25,5 +25,7 @@ urlpatterns = [
     path("about/",views.about,name="about"),
     path("pagal/",password.pagal),
     path("age/",views.age),
+    path("bird/",views.bird),
+    
     
 ]

@@ -5,6 +5,8 @@ name="Suraj"
 age1=23
 def age(request):
     return HttpResponse("My name is {} and i am {} old".format(name,age1))
+def bird(request):
+    return HttpResponse("I love birds")    
 
 def Home(request):
     return render(request,"PasswordGenerator/home.html")  
